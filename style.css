@@ -1,0 +1,56 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif; /* Optional: set a font family */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    flex: 1 1 30%; /* Equal width for desktop */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #000;
+    position: relative; /* Ensure section title positioning */
+}
+
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f00; /* Unique color for each section title */
+    color: #fff; /* Ensure text is readable on the background */
+    padding: 5px 10px;
+    border: 1px solid #000;
+}
+
+@media screen and (max-width: 991px) {
+    .section {
+        flex-basis: 48%; /* Two sections per row for tablet */
+    }
+    
+    .section:nth-child(3) {
+        flex-basis: 100%; /* Full width for the third section on tablet */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section {
+        flex-basis: 100%; /* Full width for each section on mobile */
+    }
+}
